@@ -1,0 +1,20 @@
+{
+    "name": "aliwang/myanmartools",
+    "description": "myanmar topup tools",
+    "autoload": {
+        "psr-4": {
+            "Aliwang\\Myanmartools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "alile",
+            "email": "719362307@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.5"
+    },
+   
+    "minimum-stability": "dev"
+}
