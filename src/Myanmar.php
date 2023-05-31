@@ -99,6 +99,25 @@ class Myanmar{
         return $result;
     }
 
+
+
+     /**
+     * 发送短信
+     */
+    public function sendSms($to,$text){
+        $url = $this->config->getDomain()."api/third/send_sms";
+        $params = array(
+            "user" => $this->config->getUser(),
+            "timestamp" => time(),
+            "to"=>$to,
+            "text"=>$text
+        );
+        $params['sign'] = $this->sign($params);
+        $result = CurlsTools::httpPost($url, $params);
+        return $result;
+    }
+
+
 }
 
 
