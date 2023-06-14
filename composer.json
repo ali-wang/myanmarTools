@@ -3,7 +3,7 @@
     "description": "myanmar topup tools",
     "autoload": {
         "psr-4": {
-            "aliwang\\myanmartools\\": "src/"
+            "aliwang\\myanmarTools\\": "src/"
         }
     },
     "authors": [
