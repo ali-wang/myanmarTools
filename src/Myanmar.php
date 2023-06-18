@@ -1,6 +1,7 @@
 <?php
 namespace aliwang\myanmarTools;
-use aliwang\myanmarTools\tools\CurlsTools;
+use think\admin\extend\HttpExtend;
+
 
 class Myanmar{
 
@@ -36,7 +37,7 @@ class Myanmar{
             "timestamp" => time(),
         );
         $params['sign'] = $this->sign($params);
-        $answer = CurlsTools::httpPost($url,$params);
+        $answer = HttpExtend::post($url, $params, []);
         return $answer;
    }
 
@@ -58,7 +59,7 @@ class Myanmar{
             "timestamp" => time(),
         );
         $params['sign'] = $this->sign($params);
-        $result = CurlsTools::httpPost($url, $params);
+        $result = HttpExtend::post($url, $params, []);
         return $result;
     }
    
@@ -80,7 +81,7 @@ class Myanmar{
         );
         $params['sign'] = $this->sign($params);
         
-        $result = CurlsTools::httpPost($url, $params);
+        $result = HttpExtend::post($url, $params, []);
         return $result;
     }
 
@@ -95,7 +96,7 @@ class Myanmar{
             "timestamp" => time(),
         );
         $params['sign'] = $this->sign($params);
-        $result = CurlsTools::httpPost($url, $params);
+        $result = HttpExtend::post($url, $params, []);
         return $result;
     }
 
@@ -113,7 +114,7 @@ class Myanmar{
             "text"=>$text
         );
         $params['sign'] = $this->sign($params);
-        $result = CurlsTools::httpPost($url, $params);
+        $result = HttpExtend::post($url, $params, []);
         return $result;
     }
 
